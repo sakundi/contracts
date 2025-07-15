@@ -1,0 +1,9 @@
+{
+ "proxyAdminOwnerAddress": "0x86E67a05324A55AF6B2b3bF1A5cBA1778C56A8bE",
+ "identityTreeStore": "0x5c9Ab5CFB628034987f8f083E3BC39dB09bb8DD1",
+ "poseidon2ContractAddress": "0x72F721D9D5f91353B505207C63B56cF3d9447edB",
+ "poseidon3ContractAddress": "0x5Bc89782d5eBF62663Df7Ce5fb4bc7408926A240",
+ "network": "blockdag-testnet",
+ "chainId": 1043,
+ "deployStrategy": "basic"
+}

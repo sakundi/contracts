@@ -7,10 +7,10 @@ import {
 async function main() {
   const [signer] = await ethers.getSigners();
 
-  await signer.sendTransaction({
+  /* await signer.sendTransaction({
     to: "0xeD456e05CaAb11d66C4c797dD6c1D6f9A7F352b5",
     value: ethers.parseEther("100.0"),
-  });
+  }); */
   const provider = ethers.provider;
   const txResponse = await provider.broadcastTransaction(SIGNED_SERIALISED_TRANSACTION_GAS_LIMIT_25000000);
 

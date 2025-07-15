@@ -1,0 +1,10 @@
+{
+ "proxyAdminOwnerAddress": "0x86E67a05324A55AF6B2b3bF1A5cBA1778C56A8bE",
+ "state": "0x769671b481BA59414733BA95fe8aD2731d6652E6",
+ "stateLib": "0x5df6FDC34755943A7C072B4f07A1D507019297D8",
+ "stateCrossChainLib": "0x34f4dd95cc16A07a800C0b74C737C53020277894",
+ "crossChainProofValidator": "0x6C6F19679b1537c08dC94DDc7b8Eb370F3A51983",
+ "network": "blockdag-testnet",
+ "chainId": 1043,
+ "deployStrategy": "basic"
+}

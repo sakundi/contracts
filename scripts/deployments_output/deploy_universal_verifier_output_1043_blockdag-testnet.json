@@ -1,0 +1,9 @@
+{
+ "proxyAdminOwnerAddress": "0x86E67a05324A55AF6B2b3bF1A5cBA1778C56A8bE",
+ "universalVerifier": "0x1df35a82599809BEEa7f3c1Ce24e10d1F0a26914",
+ "verifierLib": "0x972B4BFDd536B5CCd1066F9eA960B14BA0906C58",
+ "state": "0x3C9acB2205Aa72A05F6D77d708b5Cf85FCa3a896",
+ "network": "blockdag-testnet",
+ "chainId": 1043,
+ "deployStrategy": "basic"
+}

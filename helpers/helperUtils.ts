@@ -97,7 +97,7 @@ export async function verifyContract(
     libraries: any;
   },
 ): Promise<boolean> {
-  if (hre.network.name === "localhost") {
+  if (hre.network.name === "localhost" || hre.network.name === "blockdag-testnet") {
     return true;
   }
   // When verifying if the proxy contract is not verified yet we need to pass the arguments

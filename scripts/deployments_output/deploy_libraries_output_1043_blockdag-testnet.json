@@ -1,0 +1,10 @@
+{
+ "poseidon1": "0x79c1b6603F1d3E02DC38B5986cEa04e2302E6b6D",
+ "poseidon2": "0x29b57bd1C16EAf3709765D85558C04823581B631",
+ "poseidon3": "0x89c5Ad79c77B8BEDd0a82502785cD11B521D5F46",
+ "poseidon4": "0x9c1D57C98806AfA95dCe74f52A8eDcaC67841692",
+ "smtLib": "0xf70dbED63F4CE2127B4a683D00d87Dec4A871010",
+ "network": "blockdag-testnet",
+ "chainId": 1043,
+ "deployStrategy": "basic"
+}

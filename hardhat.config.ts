@@ -104,6 +104,13 @@ const config: HardhatUserConfig = {
       // accounts: process.env.PRIVATE_KEY ? [`0x${process.env.PRIVATE_KEY}`] : DEFAULT_ACCOUNTS,
       ledgerAccounts: [`${process.env.LEDGER_ACCOUNT}`],
     },
+    "blockdag-testnet": {
+      chainId: 1043,
+      url: `${process.env.BLOCKDAG_TESTNET_RPC_URL}`,
+      accounts: process.env.PRIVATE_KEY ? [`0x${process.env.PRIVATE_KEY}`] : DEFAULT_ACCOUNTS,
+      // ledgerAccounts: [`${process.env.LEDGER_ACCOUNT}`],
+      gasPrice: 1_000_000_000, // 1 gwei in wei,
+    },
     // hardhat: {
     //   chainId: 80002,
     //   forking: {
@@ -126,7 +133,7 @@ const config: HardhatUserConfig = {
     localhost: {
       url: "http://127.0.0.1:8545",
       timeout: 100000000,
-      // accounts: process.env.PRIVATE_KEY ? [`0x${process.env.PRIVATE_KEY}`] : DEFAULT_ACCOUNTS,
+      accounts: process.env.PRIVATE_KEY ? [`0x${process.env.PRIVATE_KEY}`] : DEFAULT_ACCOUNTS,
     },
   },
   gasReporter: {
@@ -176,6 +183,7 @@ const config: HardhatUserConfig = {
       "linea-sepolia": process.env.LINEA_EXPLORER_API_KEY || "",
       "zkevm-cardona": process.env.ZKEVM_EXPLORER_API_KEY || "",
       "zkevm-mainnet": process.env.ZKEVM_EXPLORER_API_KEY || "",
+      "blockdag-testnet": process.env.BLOCKDAG_EXPLORER_API_KEY || "",
     },
     customChains: [
       {
@@ -216,6 +224,14 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://api-zkevm.polygonscan.com/api",
           browserURL: "https://docs.polygonscan.com/polygon-zkevm",
+        },
+      },
+      {
+        network: "blockdag-testnet",
+        chainId: 1043,
+        urls: {
+          apiURL: "https://test-rpc.primordial.bdagscan.com/",
+          browserURL: "https://docs.blockdagnetwork.io",
         },
       },
     ],

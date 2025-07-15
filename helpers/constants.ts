@@ -75,7 +75,12 @@ export const chainIdInfoMap: Map<number, ChainIdInfo> = new Map()
     idType: "0x0148",
     networkType: "test",
     oracleSigningAddress: ORACLE_SIGNING_ADDRESS_PRODUCTION,
-  }); // linea-sepolia
+  }) // linea-sepolia
+  .set(1043, {
+    idType: "0x0149",
+    networkType: "test",
+    oracleSigningAddress: ORACLE_SIGNING_ADDRESS_PRODUCTION,
+  }); // blockdag-testnet
 
 export const networks = Object.freeze({
   PRIVADO_TEST: { name: "Privado Test", chainId: 21001 },
@@ -88,6 +93,7 @@ export const networks = Object.freeze({
   ZKEVM_MAINNET: { name: "Zkevm Mainnet", chainId: 1101 },
   LINEA_SEPOLIA: { name: "Linea Sepolia", chainId: 59141 },
   LINEA_MAINNET: { name: "Linea Mainnet", chainId: 59144 },
+  BLOCKDAG_TESTNET: { name: "Blockdag Testnet", chainId: 1043 },
 });
 
 export const STATE_ADDRESS_POLYGON_AMOY = "0x1a4cC30f2aA0377b0c3bc9848766D90cb4404124";

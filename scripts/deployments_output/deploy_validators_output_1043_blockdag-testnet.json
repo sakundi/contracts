@@ -1,0 +1,28 @@
+{
+ "proxyAdminOwnerAddress": "0x86E67a05324A55AF6B2b3bF1A5cBA1778C56A8bE",
+ "validatorsInfo": [
+  {
+   "validatorType": "mtpV2",
+   "validator": "0x3998e052431e7008687ACEd665795dB4d33B1a10",
+   "groth16verifier": "0xf3e4E34FF2222487563EcbBA7789B422229FeD67"
+  },
+  {
+   "validatorType": "sigV2",
+   "validator": "0x1Cd67dE5790B7612BB5787fFaB319191fb90EDE7",
+   "groth16verifier": "0x93d1e7B815974b12bf68e0A96F05a791aB00a629"
+  },
+  {
+   "validatorType": "v3",
+   "validator": "0xD3622eC51837a46C7979A4742Db81A647cd4EC14",
+   "groth16verifier": "0x3d8bC45326CCa7e656a57bEc1EdE34d6095c6622"
+  },
+  {
+   "validatorType": "authV2",
+   "validator": "0x9a7831CFF762756BdC6CD1471916C921010C4d0F",
+   "groth16verifier": "0x919EE4EF7f50db147dB32d15b262cC624CD87601"
+  }
+ ],
+ "network": "blockdag-testnet",
+ "chainId": 1043,
+ "deployStrategy": "basic"
+}

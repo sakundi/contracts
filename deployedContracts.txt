@@ -1,0 +1,99 @@
+npx hardhat run scripts/deploy/deployLibraries.ts --network blockdag-testnet
+
+[✓] Poseidon1Element deployed to: 0x79c1b6603F1d3E02DC38B5986cEa04e2302E6b6D
+[✓] Poseidon2Element deployed to: 0x29b57bd1C16EAf3709765D85558C04823581B631
+[✓] Poseidon3Element deployed to: 0x89c5Ad79c77B8BEDd0a82502785cD11B521D5F46
+[✓] Poseidon4Element deployed to: 0x9c1D57C98806AfA95dCe74f52A8eDcaC67841692
+[ 'deploying with BASIC strategy...' ]
+[✓] SmtLib deployed to:  0xf70dbED63F4CE2127B4a683D00d87Dec4A871010
+
+==============================================================================
+
+npx hardhat run scripts/deploy/deployState.ts --network blockdag-testnet
+
+[ '======== State: deploy started ========' ]
+[ 'found defaultIdType 0x0149 for chainId 1043' ]
+[ 'deploying Groth16VerifierStateTransition...' ]
+[✓] Groth16VerifierStateTransition contract deployed to address 0xB1D0204F72062FF56bA43133ED590ce49e16a81B from 0x86E67a05324A55AF6B2b3bF1A5cBA1778C56A8bE
+[ 'deploying StateLib...' ]
+[✓] StateLib deployed to:  0x5df6FDC34755943A7C072B4f07A1D507019297D8
+[ 'deploying StateCrossChainLib...' ]
+[✓] StateCrossChainLib deployed to:  0x34f4dd95cc16A07a800C0b74C737C53020277894
+[ 'deploying CrossChainProofValidator...' ]
+[✓] CrossChainProofValidator deployed to: 0x6C6F19679b1537c08dC94DDc7b8Eb370F3A51983
+[ 'deploying State...' ]
+[ 'deploying with BASIC strategy...' ]
+Warning: Potentially unsafe deployment of contracts/state/State.sol:State
+
+    You are using the `unsafeAllow.external-library-linking` flag to include external libraries.
+    Make sure you have manually checked that the linked libraries are upgrade safe.
+
+[✓] State contract deployed to address 0x769671b481BA59414733BA95fe8aD2731d6652E6 from 0x86E67a05324A55AF6B2b3bF1A5cBA1778C56A8bE
+[ '======== State: deploy completed ========' ]
+
+===========================================================
+
+npx hardhat run scripts/deploy/deployIdentityTreeStore.ts --network blockdag-testnet
+
+[ 'deploying with BASIC strategy...' ]
+Warning: Potentially unsafe deployment of contracts/identitytreestore/IdentityTreeStore.sol:IdentityTreeStore
+
+    You are using the `unsafeAllow.external-library-linking` flag to include external libraries.
+    Make sure you have manually checked that the linked libraries are upgrade safe.
+
+[✓] 
+IdentityTreeStore deployed to: 0x5c9Ab5CFB628034987f8f083E3BC39dB09bb8DD1
+
+=============================================================================
+
+npx hardhat run scripts/deploy/deployValidators.ts --network blockdag-testnet
+
+[✓] Groth16VerifierMTPWrapper Wrapper deployed to: 0xf3e4E34FF2222487563EcbBA7789B422229FeD67
+[ 'deploying with BASIC strategy...' ]
+[✓] CredentialAtomicQueryMTPV2Validator deployed to: 0x3998e052431e7008687ACEd665795dB4d33B1a10
+[✓] Groth16VerifierSigWrapper Wrapper deployed to: 0x93d1e7B815974b12bf68e0A96F05a791aB00a629
+[ 'deploying with BASIC strategy...' ]
+[✓] CredentialAtomicQuerySigV2Validator deployed to: 0x1Cd67dE5790B7612BB5787fFaB319191fb90EDE7
+[✓] Groth16VerifierV3Wrapper Wrapper deployed to: 0x3d8bC45326CCa7e656a57bEc1EdE34d6095c6622
+[ 'deploying with BASIC strategy...' ]
+[✓] CredentialAtomicQueryV3Validator deployed to: 0xD3622eC51837a46C7979A4742Db81A647cd4EC14
+[✓] Groth16VerifierAuthV2Wrapper Wrapper deployed to: 0x919EE4EF7f50db147dB32d15b262cC624CD87601
+[ 'deploying with BASIC strategy...' ]
+[✓] AuthV2Validator deployed to: 0x9a7831CFF762756BdC6CD1471916C921010C4d0F
+
+==================================================================================
+
+npx hardhat run scripts/deploy/deployUniversalVerifier.ts --network blockdag-testnet
+
+[✓] VerifierLib deployed to:  0x972B4BFDd536B5CCd1066F9eA960B14BA0906C58
+Waiting for 5 confirmations to not interfere with Hardhat Ignition
+[ 'deploying with BASIC strategy...' ]
+Warning: Potentially unsafe deployment of contracts/verifiers/UniversalVerifier.sol:UniversalVerifier
+
+    You are using the `unsafeAllow.external-library-linking` flag to include external libraries.
+    Make sure you have manually checked that the linked libraries are upgrade safe.
+
+Warning: Potentially unsafe deployment of contracts/verifiers/UniversalVerifier.sol:UniversalVerifier
+
+    You are using the `unsafeAllow.missing-initializer` flag.
+    Make sure you have manually checked that the contract has an initializer and that it correctly calls all parent initializers.
+
+[✓] UniversalVerifier deployed to: 0x1df35a82599809BEEa7f3c1Ce24e10d1F0a26914
+
+========================================================================================
+
+npx hardhat run scripts/maintenance/addValidatorsToUniversalVerifier.ts --network blockdag-testnet
+
+Adding validators to Universal Verifier...
+Adding validator CredentialAtomicQueryMTPV2Validator (0x3998e052431e7008687ACEd665795dB4d33B1a10) to whitelist...
+[✓] Validator CredentialAtomicQueryMTPV2Validator (0x3998e052431e7008687ACEd665795dB4d33B1a10) whitelisted
+Adding validator CredentialAtomicQuerySigV2Validator (0x1Cd67dE5790B7612BB5787fFaB319191fb90EDE7) to whitelist...
+[✓] Validator CredentialAtomicQuerySigV2Validator (0x1Cd67dE5790B7612BB5787fFaB319191fb90EDE7) whitelisted
+Adding validator CredentialAtomicQueryV3Validator (0xD3622eC51837a46C7979A4742Db81A647cd4EC14) to whitelist...
+[✓] Validator CredentialAtomicQueryV3Validator (0xD3622eC51837a46C7979A4742Db81A647cd4EC14) whitelisted
+Adding validator AuthV2Validator (0x9a7831CFF762756BdC6CD1471916C921010C4d0F) to whitelist...
+[✓] Validator AuthV2Validator (0x9a7831CFF762756BdC6CD1471916C921010C4d0F) whitelisted
+
+
+
+
